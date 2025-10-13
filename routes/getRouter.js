@@ -5,7 +5,7 @@ const carController = require("../controllers/carController");
 const defaultController = require("../controllers/defaultController");
 
 const getRouter = (req, res) => {
-  const pathname = url.parse(req, false).pathname;
+  const pathname = url.parse(req.url, false).pathname;
   switch (pathname) {
     case "/":
       fs.createReadStream(

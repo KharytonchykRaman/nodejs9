@@ -6,8 +6,8 @@ const control = (req, res) => {
   const filePath = path.join(__dirname, "..", "public", req.url);
   fs.access(filePath, fs.constants.R_OK, (err) => {
     if (err) {
-      response.writeHead(404, { "Content-Type": "text/plain" });
-      response.end("Request Error. Check the path");
+      res.writeHead(404, { "Content-Type": "text/plain" });
+      res.end("Request Error. Check the path");
     } else {
       const extname = path.extname(filePath);
       const contentType = mimeTypes[extname] || "applicatopn/octet-stream";

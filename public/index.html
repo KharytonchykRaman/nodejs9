@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car violations page</title>
     <link rel="stylesheet" href="/css/style.css">
-    <script defer src="/js/script.js"></script>
+    <script defer type="module" src="/js/script.js"></script>
 </head>
 <body>
     <aside>
@@ -14,6 +14,21 @@
         </div>
     </aside>
     <main>
+        <header class="create-header">
+            <input type="text" placeholder="car number">
+            <input type="text" placeholder="car brand">
+            <input type="color" id="carColorInput">
+            <input type="number" placeholder="car release year">
+            <select name="" id="engineTypeSelect">
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <input type="number" placeholder="violations number">
+            <input type="number" placeholder="unpaid fines">
+            <button id="createButton">Add car info</button>
+        </header>
         <div class="cards-container">
             
         </div>
