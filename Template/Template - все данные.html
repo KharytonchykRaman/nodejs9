@@ -1,0 +1,120 @@
+<!-- HTML-составляющая с примером всех заполненных полей -->
+<div class="stolen-car-card" data-plate="1234-AB5">
+  <div class="photo">
+    <img alt="Фото автомобиля" src="./speed.png" />
+  </div>
+
+  <div class="info">
+    <div class="row">
+      <div class="label">Марка</div>
+      <div class="value">Toyota Camry</div>
+    </div>
+
+    <div class="row">
+      <div class="label">Номер</div>
+      <div class="value plate">1234-AB5</div>
+    </div>
+
+    <div class="row">
+      <div class="label">Окрас</div>
+      <div class="value">
+        <span>#1E90FF</span>
+        <span
+          class="color-swatch"
+          title="Цвет"
+          style="background-color: #1e90ff"
+        ></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">Год выпуска</div>
+      <div class="value">2018</div>
+    </div>
+
+    <div class="row">
+      <div class="label">Тип двигателя</div>
+      <div class="value">бензин</div>
+    </div>
+
+    <div class="row">
+      <div class="label">Нарушений</div>
+      <div class="value">3</div>
+    </div>
+
+    <div class="row">
+      <div class="label">Сумма неоплаченных штрафов</div>
+      <div class="value">360 BYN</div>
+    </div>
+  </div>
+</div>
+
+<!-- CSS-составляющая — нужно вынести в css!-->
+<style>
+  .stolen-car-card {
+    display: flex;
+    gap: 14px;
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 10px;
+    width: 450px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    font-family: Arial, sans-serif;
+  }
+  .stolen-car-card .photo {
+    width: 150px;
+    height: 100px;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .stolen-car-card .photo img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+    display: block;
+  }
+  .placeholder {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+  .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .label {
+    color: #666;
+    font-size: 13px;
+  }
+  .value {
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .plate {
+    letter-spacing: 1px;
+    font-family: monospace;
+  }
+  .color-swatch {
+    display: inline-block;
+    width: 18px;
+    height: 14px;
+    margin-left: 8px;
+    border-radius: 3px;
+    border: 1px solid #bbb;
+    vertical-align: middle;
+  }
+</style>
