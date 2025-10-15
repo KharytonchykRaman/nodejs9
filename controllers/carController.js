@@ -83,7 +83,7 @@ const edit = (req, res) => {
     );
     cars.list[carIndex] = clientData;
 
-    fs.writeFileSync(dumpFilePath, JSON.parse(cars.list, null, "\t"));
+    fs.writeFileSync(dumpFilePath, JSON.stringify(cars.list, null, "\t"));
 
     res.writeHead(200, { "Content-Type": "text/plain" });
     res.end("Car information edited!");

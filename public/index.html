@@ -44,6 +44,10 @@
       </div>
       <textarea id="responseText" cols="30" rows="2" placeholder="response text will be here" readonly></textarea>
     </header>
+    <button id="firstFetchButton">/car-violation/filter?brand=ford</button>
+    <button id="secondFetchButton">/car-violation/filter?engineType=gasoline</button>
+    <button id="thirdFetchButton">/car-violation/filter?engineType=gasoline&colorWord=white</button>
+    <button id="fourthFetchButton">/car-violation/all</button>
     <div class="cards-container" id="cardsContainer">
 
     </div>
@@ -53,13 +57,13 @@
 <template id="template">
   <div class="stolen-car-card" data-number="{{number}}">
     <div class="photo">
-      <img alt="Фото автомобиля" src="{{imgSrc}}" />
+      <img class="car-photo" alt="Фото автомобиля" src="{{imgSrc}}" />
     </div>
 
     <div class="info">
       <div class="row">
         <div class="label">Марка</div>
-        <div class="value">{{brand}}</div>
+        <div class="value brand">{{brand}}</div>
       </div>
 
       <div class="row">
@@ -76,22 +80,22 @@
 
       <div class="row">
         <div class="label">Год выпуска</div>
-        <div class="value">{{releaseYear}}</div>
+        <div class="value releaseYear">{{releaseYear}}</div>
       </div>
 
       <div class="row">
         <div class="label">Тип двигателя</div>
-        <div class="value">{{engineType}}</div>
+        <div class="value engineType">{{engineType}}</div>
       </div>
 
       <div class="row">
         <div class="label">Нарушений</div>
-        <div class="value">{{violationsNumber}}</div>
+        <div class="value violationsNumber">{{violationsNumber}}</div>
       </div>
 
       <div class="row">
         <div class="label">Сумма неоплаченных штрафов</div>
-        <div class="value">{{unpaidFines}} BYN</div>
+        <div class="value unpaidFines">{{unpaidFines}}</div>
       </div>
       <button class="editButton">edit</button>
       <button class="deleteButton">delete</button>

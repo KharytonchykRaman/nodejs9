@@ -1,22 +1,32 @@
 [
 	{
-		"brand": "ford",
-		"number": "1234-AA5",
-		"colorWord": "blue",
-		"releaseYear": "2000",
-		"engineType": "electro",
-		"violationsNumber": "2",
-		"unpaidFines": "100$",
-		"imgSrc": "/img/speed.png"
+		"brand": "Toyota",
+		"number": "3457-TN3",
+		"colorWord": "yellow",
+		"releaseYear": "12356",
+		"engineType": "gasoline",
+		"violationsNumber": "1354",
+		"unpaidFines": "15",
+		"imgSrc": ""
 	},
 	{
-		"brand": "123",
-		"number": "1234-BB1",
+		"brand": "dfghdfg",
+		"number": "3485-MT4",
 		"colorWord": "green",
-		"releaseYear": "123",
-		"engineType": "gasoline",
-		"violationsNumber": "123",
-		"unpaidFines": "123",
-		"imgSrc": "https://mystat.itstep.by/assets/images/star.png?v=204f659eb133b4f414e656a3ac055f66"
+		"releaseYear": "4567",
+		"engineType": "diesel",
+		"violationsNumber": "3456",
+		"unpaidFines": "3456",
+		"imgSrc": "http://localhost:5000/"
+	},
+	{
+		"brand": "345345",
+		"number": "3456-HT3",
+		"colorWord": "yellow",
+		"releaseYear": "3453",
+		"engineType": "diesel",
+		"violationsNumber": "3434",
+		"unpaidFines": "346346",
+		"imgSrc": ""
 	}
 ]
