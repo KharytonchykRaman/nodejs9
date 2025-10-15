@@ -1,3 +1,22 @@
-{
-    
-}
+[
+	{
+		"brand": "ford",
+		"number": "1234-AA5",
+		"colorWord": "blue",
+		"releaseYear": "2000",
+		"engineType": "electro",
+		"violationsNumber": "2",
+		"unpaidFines": "100$",
+		"imgSrc": "/img/speed.png"
+	},
+	{
+		"brand": "123",
+		"number": "1234-BB1",
+		"colorWord": "green",
+		"releaseYear": "123",
+		"engineType": "gasoline",
+		"violationsNumber": "123",
+		"unpaidFines": "123",
+		"imgSrc": "https://mystat.itstep.by/assets/images/star.png?v=204f659eb133b4f414e656a3ac055f66"
+	}
+]

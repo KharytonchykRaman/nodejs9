@@ -1,58 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Car violations page</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <script defer type="module" src="/js/script.js"></script>
-  </head>
-  <body>
-    <aside>
-      <div class="filter-container"></div>
-    </aside>
-    <main>
-      <header class="create-header">
-        <input type="text" placeholder="car number" id="carNumberInput" />
-        <input type="text" placeholder="car brand" id="carBrandInput" />
-        <select name="" id="carColorSelect">
-          <option data-color="*">Choose one option</option>
-          <option data-color="red">red</option>
-          <option data-color="yellow">yellow</option>
-          <option data-color="green">green</option>
-          <option data-color="blue">blue</option>
-          <option data-color="grey">grey</option>
-          <option data-color="black">black</option>
-          <option data-color="white">white</option>
-        </select>
-        <input
-          type="number"
-          placeholder="car release year"
-          id="carReleaseYearInput"
-        />
-        <select name="" id="engineTypeSelect">
-          <option data-engineType="*">Choose one option</option>
-          <option data-engineType="diesel">diesel</option>
-          <option data-engineType="gasoline">gasoline</option>
-          <option data-engineType="electro">electro</option>
-          <option data-engineType="hybrid">hybrid</option>
-        </select>
-        <input
-          type="number"
-          placeholder="violations number"
-          id="carViolationsNumberInput"
-        />
-        <input
-          type="number"
-          placeholder="unpaid fines"
-          id="carUnpaidFinesInput"
-        />
-        <div class="createButtonDiv">
-          <button id="createButton">Add car info</button>
-          <p id="createButtonP"></p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car violations page</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script defer type="module" src="/js/script.js"></script>
+</head>
+
+<body>
+  <aside>
+    <div class="filter-container"></div>
+  </aside>
+  <main>
+    <header class="create-header">
+      <input type="text" placeholder="car number 1111-AA1" id="carNumberInput" />
+      <input type="text" placeholder="car brand" id="carBrandInput" />
+      <select name="" id="carColorSelect">
+        <option value="*">Choose one option</option>
+        <option value="red">red</option>
+        <option value="yellow">yellow</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+        <option value="grey">grey</option>
+        <option value="black">black</option>
+        <option value="white">white</option>
+      </select>
+      <input type="number" placeholder="car release year" id="carReleaseYearInput" />
+      <select name="" id="engineTypeSelect">
+        <option value="*">Choose one option</option>
+        <option value="diesel">diesel</option>
+        <option value="gasoline">gasoline</option>
+        <option value="electro">electro</option>
+        <option value="hybrid">hybrid</option>
+      </select>
+      <input type="number" placeholder="violations number" id="carViolationsNumberInput" />
+      <input type="number" placeholder="unpaid fines" id="carUnpaidFinesInput" />
+      <input type="text" placeholder="img src (optional)" id="carImgSrcInput" />
+      <div class="createButtonDiv">
+        <button id="createButton">Add car info</button>
+        <p id="createButtonP"></p>
+      </div>
+      <textarea id="responseText" cols="30" rows="2" placeholder="response text will be here" readonly></textarea>
+    </header>
+    <div class="cards-container" id="cardsContainer">
+
+    </div>
+  </main>
+</body>
+
+<template id="template">
+  <div class="stolen-car-card" data-number="{{number}}">
+    <div class="photo">
+      <img alt="Фото автомобиля" src="{{imgSrc}}" />
+    </div>
+
+    <div class="info">
+      <div class="row">
+        <div class="label">Марка</div>
+        <div class="value">{{brand}}</div>
+      </div>
+
+      <div class="row">
+        <div class="label">Номер</div>
+        <div class="value plate">{{number}}</div>
+      </div>
+
+      <div class="row">
+        <div class="label">Окрас</div>
+        <div class="value">
+          <div class="color-swatch">{{colorWord}}</div>
         </div>
-      </header>
-      <div class="cards-container"></div>
-    </main>
-  </body>
+      </div>
+
+      <div class="row">
+        <div class="label">Год выпуска</div>
+        <div class="value">{{releaseYear}}</div>
+      </div>
+
+      <div class="row">
+        <div class="label">Тип двигателя</div>
+        <div class="value">{{engineType}}</div>
+      </div>
+
+      <div class="row">
+        <div class="label">Нарушений</div>
+        <div class="value">{{violationsNumber}}</div>
+      </div>
+
+      <div class="row">
+        <div class="label">Сумма неоплаченных штрафов</div>
+        <div class="value">{{unpaidFines}} BYN</div>
+      </div>
+      <button class="editButton">edit</button>
+      <button class="deleteButton">delete</button>
+    </div>
+  </div>
+</template>
+
+
 </html>

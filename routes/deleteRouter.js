@@ -2,7 +2,7 @@ const url = require("url");
 const carController = require("../controllers/carController");
 
 const deleteRouter = (req, res) => {
-  const pathname = url.parse(url, false).pathname;
+  const pathname = url.parse(req.url, false).pathname;
   switch (pathname) {
     case "/adminpage/delete":
       carController.remove(req, res);
