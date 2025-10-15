@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Car violations page</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
     <script defer type="module" src="/js/script.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <aside>
-        <div class="filter-container">
-
-        </div>
+      <div class="filter-container"></div>
     </aside>
     <main>
-        <header class="create-header">
-            <input type="text" placeholder="car number">
-            <input type="text" placeholder="car brand">
-            <input type="color" id="carColorInput">
-            <input type="number" placeholder="car release year">
-            <select name="" id="engineTypeSelect">
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
-            <input type="number" placeholder="violations number">
-            <input type="number" placeholder="unpaid fines">
-            <button id="createButton">Add car info</button>
-        </header>
-        <div class="cards-container">
-            
+      <header class="create-header">
+        <input type="text" placeholder="car number" id="carNumberInput" />
+        <input type="text" placeholder="car brand" id="carBrandInput" />
+        <select name="" id="carColorSelect">
+          <option data-color="*">Choose one option</option>
+          <option data-color="red">red</option>
+          <option data-color="yellow">yellow</option>
+          <option data-color="green">green</option>
+          <option data-color="blue">blue</option>
+          <option data-color="grey">grey</option>
+          <option data-color="black">black</option>
+          <option data-color="white">white</option>
+        </select>
+        <input
+          type="number"
+          placeholder="car release year"
+          id="carReleaseYearInput"
+        />
+        <select name="" id="engineTypeSelect">
+          <option data-engineType="*">Choose one option</option>
+          <option data-engineType="diesel">diesel</option>
+          <option data-engineType="gasoline">gasoline</option>
+          <option data-engineType="electro">electro</option>
+          <option data-engineType="hybrid">hybrid</option>
+        </select>
+        <input
+          type="number"
+          placeholder="violations number"
+          id="carViolationsNumberInput"
+        />
+        <input
+          type="number"
+          placeholder="unpaid fines"
+          id="carUnpaidFinesInput"
+        />
+        <div class="createButtonDiv">
+          <button id="createButton">Add car info</button>
+          <p id="createButtonP"></p>
         </div>
+      </header>
+      <div class="cards-container"></div>
     </main>
-</body>
+  </body>
 </html>
